@@ -56,7 +56,12 @@ situation), you can receive multiple object into `data` array like in this examp
     }
 
 Below you can see the full list of fields that each record into `data` array contains:
+
 | Field | Description |
 | --- | --- |
 | name | Indicates the municipality name. |
 | code | Indicates the municipality code unique code (provided by ISTAT or simple the Zip Code) | 
+| region | Indicates the municipality's region. | 
+| country | Indicates the municipality's country. | 
+| zip_code | Indicates the municipality's zip code. |
+| province | Indicates the municipality's province. | 

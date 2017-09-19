@@ -21,7 +21,7 @@
 	];
 	foreach($resolvers as $resolver) {
 		$data = $resolver->getByZipCode($zipCode);
-		if (!is_null($data)) {
+		if (!is_null($data) && count($data) > 0) {
 			echo json_encode(['error' => false, 'data' => $data]);
 			exit;
 		}
