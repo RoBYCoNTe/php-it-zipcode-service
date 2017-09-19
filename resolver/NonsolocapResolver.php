@@ -10,7 +10,7 @@
 			$html = file_get_html("http://www.nonsolocap.it/cap/$zipCode/");
 			$tr = $html->find('tr.lh', 0);
 			if (is_null($tr)) {
-				return null;
+				return [];
 			}
 			$cells = $tr->find('td');
 			$municipality = [];
@@ -24,10 +24,10 @@
 			return [$municipality];
 		}
 		public function getByName($name) {
-			return null;
+			return [];
 		}
 		public function getByCode($code) {
-			return null;
+			return [];
 		}
 	}
 ?>

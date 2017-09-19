@@ -1,7 +1,11 @@
 <?php 
 	require_once __DIR__ . '/../vendor/simple_html_dom.php';
 	require_once 'Resolver.php';
-
+	
+	/**
+	 * Zip Code Resolver
+	 * @website: http://www.comuniecitta.it
+	 */
 	class ComuniecittaResolver implements Resolver {
 		public function getByZipCode($zipCode) {
 			$html = file_get_html("http://www.comuniecitta.it/cerca-cap-internazionali?chiave=$zipCode");
@@ -24,10 +28,10 @@
 			return $data;
 		}
 		public function getByName($name) {
-			return null;
+			return [];
 		}
 		public function getByCode($code) {
-			return null;
+			return [];
 		}
 	}
 ?>

@@ -25,10 +25,10 @@
 			return null;
 		}
 		public function getByName($name) {
-
+			return [];
 		}
 		public function getByCode($code) {
-
+			return [];
 		}
 	}
 ?>
