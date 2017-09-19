@@ -1,5 +1,5 @@
 <?php 
-	require_once '../libs/simple_html_dom.php';
+	require_once __DIR__ . '/../vendor/simple_html_dom.php';
 	require_once 'Resolver.php';
 
 	class ComuniecittaResolver implements Resolver {

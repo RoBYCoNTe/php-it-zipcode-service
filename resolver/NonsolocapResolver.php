@@ -1,7 +1,10 @@
 <?php 
-	require_once '../libs/simple_html_dom.php';
+	require_once __DIR__ . '/../vendor/simple_html_dom.php';
 	require_once 'Resolver.php';
-
+	/**
+	 * Zip Code Resolver
+	 * @website: http://www.nonsolocap.it
+	 */
 	class NonsolocapResolver implements Resolver {
 		public function getByZipCode($zipCode) {
 			$html = file_get_html("http://www.nonsolocap.it/cap/$zipCode/");
