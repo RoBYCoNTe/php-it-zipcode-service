@@ -11,13 +11,20 @@
 	require_once 'resolver/LocalDataResolver.php';
 	require_once 'resolver/NonsolocapResolver.php';
 	require_once 'resolver/ComuniecittaResolver.php';
+	require_once 'resolver/CodiceavviamentopostaleResolver.php';
 
 	//	If you need to implement new resolver, you can add it here.
 	//	Resolver priority is handled by array index (the first that match the code win).
 	$resolvers = [
-		new LocalDataResolver(),	/* Search cities using local repository. */
-		new NonsolocapResolver(),	/* Search cities using nonsolocap.it website (scraping). */
-		new ComuniecittaResolver()	/* Search cities using comuniecitta.it website (scraping). */
+		/* Search cities using local repository. */
+		new LocalDataResolver(),	
+		/* Search cities using cdice-avviamento-postale.it website (scraping). */
+		new CodiceavviamentopostaleResolver(),
+		/* Search cities using comuniecitta.it website (scraping). */
+		new ComuniecittaResolver(),				
+		/* Search cities using nonsolocap.it website (scraping). */
+		new NonsolocapResolver()				
+		
 	];
 	foreach($resolvers as $resolver) {
 		$data = $resolver->getByZipCode($zipCode);

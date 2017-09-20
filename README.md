@@ -4,10 +4,10 @@
 ZipCode service is the simplest way I've found to manage italian municipalities using RESTFul web services.
 During my career I've always encountered problems related to this subject because, right now, a fully database
 containing all informations related to every single Zip Code is not yet provided by no one (you have to pay for this 
-stupid information using commercial data available online).
+informations by using commercial data available online).
 
 ## Installation
-This service, that you can install downloading and placing this repository on your server, works using
+This service, that you can install downloading and placing repository's file on your server, works using
 a very helpful existing project, [comuni-json](https://github.com/matteocontrini/comuni-json), from which
 I've generated the `LocalDataResolver` and many other HTML scrapers created to retrieve data from many sites.
 
@@ -33,8 +33,8 @@ Every request returns something like this:
        ]
     }
 
-If provided Zip Code is related to multiple location (when the municipality is not italian you can encounter this
-situation), you can receive multiple object into `data` array like in this example:
+If provided Zip Code is related to multiple locations (when the municipality is not italian you can encounter this
+situation), you can receive multiple objects into `data` array like in this example:
     
     {
        "error":false,
@@ -73,6 +73,6 @@ Below you can see the full list of fields that each record into `data` array con
 ## Demo
 You can test the service using my demo on this link: [dev.theappetize.com/php-it-zipcode-service](http://dev.theappetize.com/it-zipcode-service?zip_code=)
 
-Made with :heart: for the community. 
+Made with  :heart:  for the community. 
 
 I hope this project can help you too!

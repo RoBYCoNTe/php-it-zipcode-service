@@ -10,19 +10,20 @@
 
 		public function getByZipCode($zipCode) {
 			$data = $this->load();
+			$results = [];
 			foreach($data as $item) {
 				if (in_array($zipCode, $item['cap'])) {
-					return [[
+					$results[] = [
 						'name' => $item['nome'],
 						'code' => $item['codice'],
 						'region' => $item['regione']['nome'],
 						'country' => 'Italy',
 						'zip_code' => $zipCode,
 						'province' => $item['provincia']['nome']
-					]];
+					];
 				}
 			}
-			return null;
+			return $results;
 		}
 		public function getByName($name) {
 			return [];
